@@ -1,0 +1,43 @@
+@import "JAP_BASIC_FORMAT.scss";
+
+.vocabulary_folder {
+  margin: 30px 20px;
+  &_topic_link {
+    color: rgb(92, 93, 184);
+    text-decoration: none;
+  }
+  & dt {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  &_topic_kanji {
+    padding: 0px 0px 20px;
+  }
+  &_topic_hiragana {
+    font-size: 12px;
+    padding: 5px 0px 0px;
+  }
+  & dd {
+    line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
+@media screen and (min-width: 449px) {
+  dl {
+    margin: 30px 30px;
+  }
+
+  dd {
+    line-height: 1.7;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
+@media screen and (min-width: 799px) {
+}
+
+@media screen and (min-width: 1439px) {
+}

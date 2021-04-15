@@ -1,0 +1,48 @@
+@import "JAP_BASIC_FORMAT.scss";
+
+.vocabulary_sorted_link {
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(92, 93, 184);
+}
+
+ul {
+  margin: 0px 30px;
+  padding-inline-start: 0px;
+  line-height: 1.5;
+}
+
+li {
+  list-style: none;
+  padding: 5px 0px;
+  border-bottom: 4px solid;
+  border-image-source: linear-gradient(
+    60deg,
+    rgba(255, 192, 203, 0),
+    rgb(233, 185, 213) 5%,
+    rgba(255, 192, 203, 0) 55%
+  );
+  border-image-slice: 1;
+}
+
+@media screen and (min-width: 449px) {
+}
+
+@media screen and (min-width: 799px) {
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+  }
+
+  .vocabulary_sorted_link--left {
+    grid-area: left;
+  }
+
+  .vocabulary_sorted_link--right {
+    grid-area: right;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+}
