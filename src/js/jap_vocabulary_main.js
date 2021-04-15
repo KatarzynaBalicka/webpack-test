@@ -1,4 +1,4 @@
-import '../scss/jap_exercise/jap_exercise_main.scss';
+import '../scss/jap_grammar_main.scss';
 
 const hamburger = document.querySelector('.hamburger--js')
 

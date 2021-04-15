@@ -8,6 +8,8 @@ module.exports = {
     another: "./src/js/another.js",
     jap_main: "./src/js/jap_main.js",
     jap_exercise_main: "./src/js/jap_exercise_main.js",
+    jap_grammar_main: "./src/js/jap_grammar_main.js",
+    jap_vocabulary_main: "./src/js/jap_vocabulary_main.js",
     navigation_button: "./src/js/navigation_button",
   },
   output: {
@@ -70,9 +72,7 @@ module.exports = {
         {
           from: "public",
           globOptions: {
-            ignore: [
-              '**/*.DS_Store'
-            ],
+            ignore: ["**/*.DS_Store"],
           },
         },
       ],
@@ -102,6 +102,18 @@ module.exports = {
       inject: true,
       chunks: ["jap_exercise_main"],
       filename: "jap_exercise_main.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/jap_grammar/jap_grammar_main.html",
+      inject: true,
+      chunks: ["jap_grammar_main"],
+      filename: "jap_grammar_main.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/jap_vocabulary/jap_vocabulary_main.html",
+      inject: true,
+      chunks: ["jap_vocabulary_main"],
+      filename: "jap_vocabulary_main.html",
     }),
   ],
 };
