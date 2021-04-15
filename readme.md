@@ -16,3 +16,4 @@ Click on `Use this template` button to generate a new repository based on this s
 
 `npm run publish` - runs build process and publish the page using `gh-pages` branch
 
+"# NOWY_japonski" 
