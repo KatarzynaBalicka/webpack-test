@@ -1,0 +1,79 @@
+@import "JAP_BASIC_FORMAT.scss";
+
+.funny_kanji_letter_box__title {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  position: sticky;
+  top: 0px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 192, 203, 0) 100%
+  );
+  &::before {
+    content: "";
+    width: 3px;
+  }
+}
+
+.funny_kanji_box {
+  padding-top: 2px;
+  &__main {
+    font-size: 21px;
+  }
+  &__explanation_tip,
+  &__translation {
+    margin-left: 20px;
+    line-height: 1.7;
+  }
+}
+
+.link_to_form {
+  display: inline-block;
+}
+
+#funny_form {
+  display: inline-block;
+}
+
+@media screen and (min-width: 449px) {
+  .page_description {
+    margin: 30px 30px;
+  }
+
+  .funny_kanji_letter_box__title {
+    height: 55px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    top: 42px;
+    background: linear-gradient(
+      90deg,
+      rgba(233, 185, 213, 1) 70%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    &::before {
+      content: "";
+      width: 30px;
+    }
+  }
+
+  .funny_kanji_box {
+    padding-top: 2px;
+    &__main {
+      padding-left: 40px;
+    }
+    &__explanation_tip,
+    &__translation {
+      padding-left: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 799px) {
+}
+
+@media screen and (min-width: 1439px) {
+}

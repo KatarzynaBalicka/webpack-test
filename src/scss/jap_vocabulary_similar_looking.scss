@@ -1,0 +1,119 @@
+@import "JAP_BASIC_FORMAT.scss";
+
+.similar_looking_row {
+  background: linear-gradient(
+    90deg,
+    rgba(245, 245, 245, 0),
+    rgba(255, 255, 255, 1) 25%,
+    rgba(255, 255, 255, 1) 75%,
+    rgba(255, 255, 255, 0)
+  );
+  margin: 0px auto;
+  width: 95%;
+  padding-bottom: 15px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-areas:
+    "translation_left hiragana_left hiragana_right translation_right"
+    "translation_left kanji_left kanji_right translation_right";
+  &__left_translation {
+    grid-area: translation_left;
+  }
+  &__left_hiragana {
+    grid-area: hiragana_left;
+  }
+  &__left_kanji {
+    grid-area: kanji_left;
+  }
+  &__right_translation {
+    grid-area: translation_right;
+  }
+  &__right_hiragana {
+    grid-area: hiragana_right;
+  }
+  &__right_kanji {
+    grid-area: kanji_right;
+  }
+}
+
+.kanji {
+  font-size: 24px;
+  font-weight: bold;
+  place-self: center;
+}
+
+.hiragana {
+  font-size: 14px;
+  justify-self: end;
+  align-self: flex-end;
+}
+
+.translation {
+  font-size: 18px;
+  place-self: center;
+}
+
+.needed_space {
+  height: 2em;
+}
+
+.pc_image {
+  display: none;
+}
+
+@media screen and (min-width: 449px) {
+  .similiar_looking_row {
+    width: 90%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 1fr 1fr 3fr;
+    grid-template-areas:
+      "translation_left hiragana_left hiragana_right translation_right"
+      "translation_left kanji_left kanji_right translation_right";
+    margin: 0px auto;
+  }
+
+  .kanji {
+    font-size: 24px;
+    font-weight: bold;
+    justify-items: center;
+    align-self: start;
+  }
+
+  .hiragana {
+    font-size: 14px;
+    justify-self: center;
+    align-self: flex-end;
+  }
+
+  .translation {
+    font-size: 18px;
+    place-self: center;
+  }
+
+  .needed_space {
+    height: 0px;
+    border-bottom: 4px solid;
+    border-image-source: linear-gradient(
+      60deg,
+      rgba(255, 192, 203, 0),
+      rgb(233, 185, 213) 50%,
+      rgba(255, 192, 203, 0)
+    );
+    border-image-slice: 1;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 799px) {
+  .translation {
+    font-size: 21px;
+  }
+  .kanji {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+}

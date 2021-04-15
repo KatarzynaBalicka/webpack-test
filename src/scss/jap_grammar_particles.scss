@@ -1,0 +1,97 @@
+@import "JAP_BASIC_FORMAT.scss";
+
+.particles_box {
+  width: 100%;
+  margin: 15px auto;
+  &_name {
+    font-size: 44px;
+    font-weight: bold;
+  }
+  &_bulletpoint {
+    font-size: 18px;
+    list-style-type: none;
+    line-height: 32px;
+    border-bottom: 4px solid;
+    border-image-source: linear-gradient(
+      60deg,
+      rgba(255, 192, 203, 0),
+      rgba(42, 8, 0, 1) 5%,
+      rgba(255, 192, 203, 0) 55%
+    );
+    border-image-slice: 1;
+    padding-bottom: none;
+    margin-bottom: 15px;
+    margin-left: -40px;
+    text-align: justify;
+    /* border: 5px solid hotpink; */
+    &__example {
+      padding-left: 25px;
+      margin: 1px;
+      /* border: 5px dotted pink; */
+    }
+    &__annotation {
+      font-size: 12px;
+    }
+  }
+}
+
+.particles_box_he {
+  order: 7;
+}
+
+.particles_box_ga {
+  order: 1;
+}
+
+.particles_box_wo {
+  order: 3;
+}
+
+.particles_box_to {
+  order: 9;
+}
+
+.particles_box_ni {
+  order: 6;
+}
+
+.particles_box_de {
+  order: 5;
+}
+
+.particles_box_no {
+  order: 4;
+}
+
+.particles_box_mo {
+  order: 10;
+}
+
+.particles_box_kara {
+  order: 11;
+}
+
+.particles_box_made {
+  order: 12;
+}
+
+@media screen and (min-width: 449px) {
+  .particles_box {
+    width: 90%;
+    margin: 15px auto;
+    &_bulletpoint {
+      border-image-source: linear-gradient(
+        60deg,
+        rgba(255, 192, 203, 0),
+        rgb(233, 185, 213) 5%,
+        rgba(255, 192, 203, 0) 55%
+      );
+    }
+  }
+}
+
+@media screen and (min-width: 799px) {
+}
+
+@media screen and (min-width: 1439px) {
+}

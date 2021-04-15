@@ -1,0 +1,84 @@
+@import "JAP_BASIC_FORMAT.scss";
+
+.homonyms_row {
+  background: linear-gradient(
+    90deg,
+    rgba(245, 245, 245, 0),
+    rgba(255, 255, 255, 1) 15%,
+    rgba(255, 255, 255, 1) 75%,
+    rgba(255, 255, 255, 0)
+  );
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-areas:
+    "translation_left hiragana_left hiragana_right translation_right"
+    "translation_left kanji_left kanji_right translation_right";
+  column-gap: 5px;
+  padding-bottom: 15px;
+  &__left_translation {
+    grid-area: translation_left;
+    justify-self: start;
+    align-self: center;
+  }
+  &__left_hiragana {
+    grid-area: hiragana_left;
+  }
+  &__left_kanji {
+    grid-area: kanji_left;
+  }
+  &__right_translation {
+    grid-area: translation_right;
+    justify-self: end;
+    align-self: center;
+  }
+  &__right_hiragana {
+    grid-area: hiragana_right;
+  }
+  &__right_kanji {
+    grid-area: kanji_right;
+  }
+}
+
+.kanji {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  place-self: center;
+}
+
+.hiragana {
+  font-size: 14px;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+.needed_space {
+  height: 2em;
+}
+
+@media screen and (min-width: 449px) {
+  .homonyms_row {
+    width: 90%;
+    margin: 0px auto;
+  }
+  .needed_space {
+    height: 0px;
+    border-bottom: 4px solid;
+    border-image-source: linear-gradient(
+      60deg,
+      rgba(255, 192, 203, 0),
+      rgb(233, 185, 213) 50%,
+      rgba(255, 192, 203, 0)
+    );
+    border-image-slice: 1;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 799px) {
+}
+
+@media screen and (min-width: 1439px) {
+}

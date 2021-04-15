@@ -1,0 +1,161 @@
+@import "JAP_BASIC_FORMAT.scss";
+
+.vocabulary_sorted_row {
+  width: 95%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: [sample] 1fr [japanese] 2fr [polish] 2fr;
+  grid-template-areas:
+    "sample hiragana translation"
+    "sample kanji translation";
+  justify-items: center;
+  &__sample {
+    grid-area: sample;
+    height: 75px;
+    width: 75px;
+    border-radius: 50px;
+  }
+  &__translation {
+    grid-area: translation;
+    place-self: center;
+  }
+
+  &__hiragana {
+    grid-area: hiragana;
+    align-self: end;
+  }
+
+  &__kanji {
+    grid-area: kanji;
+    font-weight: bold;
+  }
+}
+
+.sample_white {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+.sample_black {
+  background-image: radial-gradient(rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 70%);
+}
+
+.sample_pink {
+  background-image: radial-gradient(
+    rgb(255, 138, 191) 50%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+.sample_peachy {
+  background-image: radial-gradient(
+    rgb(248, 164, 147) 50%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+.sample_green {
+  background-image: radial-gradient(rgb(56, 176, 0) 50%, rgba(0, 0, 0, 0) 70%);
+}
+
+.sample_purple {
+  background-image: radial-gradient(
+    rgb(123, 44, 191) 50%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+.sample_blue {
+  background-image: radial-gradient(rgb(0, 166, 251) 50%, rgba(0, 0, 0, 0) 70%);
+}
+
+.sample_grey {
+  background-image: radial-gradient(
+    rgb(173, 181, 189) 50%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+.sample_red {
+  background-image: radial-gradient(rgb(208, 0, 0) 50%, rgba(0, 0, 0, 0) 70%);
+}
+
+.sample_yellow {
+  background-image: radial-gradient(rgb(255, 234, 0) 50%, rgba(0, 0, 0, 0) 70%);
+}
+
+.sample_brown {
+  background-image: radial-gradient(rgb(139, 94, 52) 50%, rgba(0, 0, 0, 0) 70%);
+}
+
+.sample_orange {
+  background-image: radial-gradient(rgb(255, 133, 0) 50%, rgba(0, 0, 0, 0) 70%);
+}
+
+.needed_space {
+  height: 2em;
+}
+
+@media screen and (min-width: 449px) {
+  .vocabulary_sorted_row {
+    grid-template-columns: [sample] 1fr [japanese] 1fr [polish] 1fr;
+    width: 90%;
+    margin: auto;
+    column-gap: 15px;
+  }
+
+  .translation {
+    font-size: 24px;
+    justify-self: start;
+  }
+
+  .hiragana {
+    font-size: 21px;
+  }
+
+  .kanji {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 799px) {
+}
+
+@media screen and (min-width: 1023px) {
+  .vocabulary_sorted_row {
+    grid-template-columns: [sample] 1fr [japanese] 2fr [polish] 2fr;
+  }
+
+  .vocabulary_sorted_row__sample {
+    grid-area: sample;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    justify-self: end;
+  }
+
+  .translation {
+    font-size: 32px;
+  }
+
+  .hiragana {
+    font-size: 28px;
+  }
+
+  .kanji {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .vocabulary_sorted_row {
+    width: 90%;
+    margin: 0px auto;
+  }
+
+  .colors_whole_table {
+    width: 90%;
+  }
+}
