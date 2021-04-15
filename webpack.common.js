@@ -4,8 +4,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
   /* here you can define another js file */
   entry: {
-    index: "./src/js/index.js",
-    another: "./src/js/another.js",
     jap_main: "./src/js/jap_main.js",
     jap_exercise_main: "./src/js/jap_exercise_main.js",
     jap_grammar_main: "./src/js/jap_grammar_main.js",
@@ -79,18 +77,7 @@ module.exports = {
     }),
 
     /* here you can define another html file and its dependencies */
-    new HtmlWebpackPlugin({
-      template: "./src/pages/index.html",
-      inject: true,
-      chunks: ["index"],
-      filename: "index.html",
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/another.html",
-      inject: true,
-      chunks: ["index", "another"],
-      filename: "another.html",
-    }),
+
     new HtmlWebpackPlugin({
       template: "./src/pages/jap_main.html",
       inject: true,
