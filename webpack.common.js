@@ -6,7 +6,9 @@ module.exports = {
   entry: {
     index: "./src/js/index.js",
     another: "./src/js/another.js",
-    jap_main: "./src/js/jap_main.js"
+    jap_main: "./src/js/jap_main.js",
+    jap_exercise_main: "./src/js/jap_exercise_main.js",
+    navigation_button: "./src/js/navigation_button",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -94,6 +96,12 @@ module.exports = {
       inject: true,
       chunks: ["jap_main"],
       filename: "jap_main.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/jap_exercise/jap_exercise_main.html",
+      inject: true,
+      chunks: ["jap_exercise_main"],
+      filename: "jap_exercise_main.html",
     }),
   ],
 };

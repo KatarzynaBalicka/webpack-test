@@ -1,6 +1,5 @@
 import '../scss/jap_exercise_main.scss';
 
-
 const hamburger = document.querySelector('.hamburger--js')
 
 hamburger.addEventListener('click', () => {
@@ -21,4 +20,3 @@ hamburger.addEventListener('click', () => {
     
 //     }
 // })
-
