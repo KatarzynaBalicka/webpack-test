@@ -19,3 +19,4 @@ hamburger.addEventListener('click', () => {
 //     }
 // })
 
+export {hamburger}
